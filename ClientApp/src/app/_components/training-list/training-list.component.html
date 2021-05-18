@@ -1,0 +1,17 @@
+<div class="container mt-5">
+  <div class="row my-2">
+    <button type="button" (click)="addPlan()" class="btn btn-default border mr-3" style="width: 7rem; height:7rem;">
+      <span class="d-block "><i class="fas fa-plus" style="color: #0275d8 ; font-size: 3rem;"></i></span>
+      Dodaj Plan
+    </button>
+
+    
+    <div *ngFor="let plan of plans; let i = index;" class="col-lg-2 col-md-3 col-sm-6">
+      <div class="d-block justify-content-center">
+        <app-training-card [plan]="plan"></app-training-card>
+        <button class="btn btn-danger ml-5" (click)="deletePlan(i)">Usuń</button>
+      </div>
+    </div>
+  
+  </div>
+</div>

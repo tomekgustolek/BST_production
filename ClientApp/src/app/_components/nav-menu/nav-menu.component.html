@@ -1,0 +1,98 @@
+ <nav class="navbar h-1 navbar-expand-md navbar-toggleable-md navbar-light bg-dark py-1">
+   <div class="container">
+     <a class="navbar-brand" [routerLink]="['/']"><img src="assets/images/logo.jpg" width="83" height="52"></a>
+
+     <div class="messages d-block d-md-none">
+       <a *ngIf="loggedIn()" [routerLink]="['/messages']"><i class="far fa-envelope py-2 d-block d-md-none" style="font-size:2.5rem;"></i></a>
+     </div>
+     <!--<div class="account d-block d-md-none">
+       <a *ngIf="!loggedIn()" [routerLink]="['/account']"><i class="far fa-user py-2 d-block d-md-none" style="font-size:2rem;"></i></a>
+     </div>-->
+     <div class="login d-block d-md-none">
+       <a *ngIf="!loggedIn()" [routerLink]="['/login']"><!--<i class="fas fa-sign-in-alt py-2 d-block d-md-none" style="font-size:2rem;"></i>-->Zaloguj się</a>
+     </div>
+
+     <button class="navbar-toggler order-first border-none"
+             type="button"
+             data-toggle="collapse"
+             data-target="#mainmenu"
+             aria-label="Toggle navigation"
+             [attr.aria-expanded]="isExpanded"
+             (click)="toggle()">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+
+     <div class="navbar-collapse collapse justify-content-md-center d-md-inline-flex flex-md-row-reverse" id="mainmenu"
+          [ngClass]="{ show: isExpanded }">
+       <ul class="navbar-nav d-flex flex-grow">
+         <li class="mx-2 nav-item"
+             [routerLinkActive]="['link-active']"
+             [routerLinkActiveOptions]="{ exact: true }">
+           <a class="nav-link text-light" [routerLink]="['/']">STRONA GŁÓWNA</a>
+         </li>
+         <li class="mx-2 nav-item" [routerLinkActive]="['link-active']">
+           <a class="nav-link text-light" [routerLink]="['/mobility']">MOBILITY</a>
+         </li>
+         <li *ngIf="!loggedIn()" class="mx-2 nav-item" [routerLinkActive]="['link-active']">
+           <a class="nav-link text-light" [routerLink]="['/planer/notlogged']">PLANER</a>
+         </li>
+         <li *ngIf="loggedIn()" class="mx-2 nav-item" [routerLinkActive]="['link-active']">
+           <a class="nav-link text-light" [routerLink]="['/planer']">PLANER </a>
+         </li>
+         <li *ngIf="loggedIn() && !isItemForCoachVisible()" class="mx-2 nav-item" [routerLinkActive]="['link-active']">
+           <a class="nav-link text-light" [routerLink]="['/member/list']">TRENERZY</a>
+         </li>
+         <!--<li class="mx-2 nav-item ">
+    <a class="nav-link text-light" href="#list-item-1">O NAS</a>
+  </li>-->
+         <li class="mx-2 nav-item" [routerLinkActive]="['link-active']">
+           <a class="nav-link text-light" [routerLink]="['/about-us']">O NAS</a>
+         </li>
+         <li *ngIf="isAdministratorPanelVisible()" class="mx-2 nav-item" [routerLinkActive]="['link-active']">
+           <a class="nav-link text-light" [routerLink]="['/admin']">ADMIN </a>
+         </li>
+       </ul>
+     </div>
+
+     <div class="messages d-none d-md-block">
+       <a *ngIf="loggedIn()" [routerLink]="['/messages']"><i class="far fa-envelope py-2 mr-3 d-none d-md-block" style="font-size:2.5rem;"></i></a>
+     </div>
+
+     <!--<div class="account d-none d-md-block">
+       <a *ngIf="!loggedIn()" [routerLink]="['/account']"><i class="far fa-user py-2 mr-3 d-none d-md-block" style="font-size:2rem;"></i></a>
+     </div>-->
+
+     <div class="login d-none d-md-inline">
+       <a *ngIf="!loggedIn()" [routerLink]="['/login']"><!--<i class="fas fa-sign-in-alt py-2 d-block d-md-none" style="font-size:2rem;"></i>-->
+         Zaloguj się
+       </a>       
+     </div>
+
+     <div *ngIf="loggedIn()" dropdown class="dropdown text-light">
+       <span class="mr-1">
+         <img class="profile-photo rounded-circle" src="{{photoUrl || '../../assets/user.png'}}" alt="">
+       </span>
+       <a dropdownToggle class="dropdown-toggle">
+         Welcome {{authService.decodedToken.unique_name | titlecase}}
+       </a>
+
+       <div *dropdownMenu class="dropdown-menu mt-3">
+         <a class="dropdown-item" [routerLink]="['/member/edit']">
+           <i class="fas fa-user mr-1"></i>Edit Profile
+         </a>
+         <div class="dropdown-divider"></div>
+         <a class="dropdown-item" (click)="logout()"><i class="fas fa-sign-out-alt mr-1"></i>Logout</a>
+       </div>
+     </div>
+
+     <!--<form *ngIf="!loggedIn()" #loginForm="ngForm" class="form-inline mt-2 mt-md-0" (ngSubmit)="login()">
+       <input class="form-control mr-sm-2" type="text" name="username"
+              placeholder="Username" required [(ngModel)]="model.username">
+       <input class="form-control mr-sm-2" type="password" name="password"
+              placeholder="Password" required [(ngModel)]="model.password">
+       <button [disabled]="!loginForm.valid" class="btn btn-primary my-2 my-sm-0" type="submit">Login</button>
+     </form>-->
+
+   </div>
+      </nav>
+
