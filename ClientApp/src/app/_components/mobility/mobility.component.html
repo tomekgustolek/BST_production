@@ -1,0 +1,255 @@
+<!--<style>
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+  }
+
+  .hero-shadow {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: -1;
+  }
+
+  .additional-text {
+    font-size: 1.8rem;
+  }
+
+  .top-hero {
+    position: relative;
+    height: 20rem;
+    background-size: cover;
+    z-index: 0;
+  }
+
+  .top-hero-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 3.6rem;
+    text-transform: uppercase;
+  }
+
+  .service-hero {
+    background-image: url(images/slider1.jpg);
+    background-position: 0 75%;
+  }
+  .service-hero-box {
+    position: relative;
+    height: 300px;
+    background-size: cover;
+    z-index: 0;
+  }
+
+  .service-hero-box p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      text-transform: uppercase;
+    }
+
+  .service-pricing .box-one {
+    background-image: url(images/slider1.jpg);
+  }
+
+  .service-pricing .box-two {
+    background-image: url('../img/service/visual.jpg');
+  }
+
+  .service-pricing .box-three {
+    background-image: url('../img/service/car-audio.jpg');
+  }
+
+  .service-pricing .box-four {
+    background-image: url('../img/service/allinone.jpg');
+  }
+
+  .service-pricing .card-header {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .service-pricing h3 {
+    font-weight: bold;
+  }
+
+  .service-pricing .btn {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+</style>-->
+
+  <div class="container-fluid px-0">
+    <section class="home-brand py-5 bg-white text-dark">
+      <div class="container">
+        <h1 class="display-3 text-center pt-1 px-3">Baw Się Treningiem</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus reprehenderit fugit
+          quas dolores sit quidem explicabo itaque. Quisquam modi placeat amet quasi perspiciatis quia
+          autem cum recusandae, iure facere velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus reprehenderit fugit
+          quas dolores sit quidem explicabo itaque. Quisquam modi placeat amet quasi perspiciatis quia
+          autem cum recusandae, iure facere velit.
+        </p>
+      </div>
+      <hr class="w-50 mx-auto mt-4 mb-5 border">
+    </section>
+
+    <section class="home-brand py-5 bg-dark text-white">
+      <div class="container">
+        <h1 class="display-3 text-center text-uppercase pt-1 pb-5 px-3"><i class="fas fa-running pr-4 pl-2" style="color:#00ace6"></i>Mobility</h1>
+       
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus reprehenderit fugit
+          quas dolores sit quidem explicabo itaque. Quisquam modi placeat amet quasi perspiciatis quia
+          autem cum recusandae, iure facere velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus reprehenderit fugit
+          quas dolores sit quidem explicabo itaque. Quisquam modi placeat amet quasi perspiciatis quia
+          autem cum recusandae, iure facere velit.
+        </p>
+      </div>
+    </section>
+
+
+
+    <section class="py-5">
+      <div class="container pt-5">
+        <div class="row">
+
+          <!--First-->
+
+          <div class="col-md-6">
+            <div class="accordion" id='acc'>
+              <div class="card mb-4">
+                <div class="box-one">
+                  <p class="h-100 text-dark text-center p-3">Pierwszy</p>
+                </div>
+
+                <div data-toggle="collapse" data-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne'>
+                  <div class="card-header text-center py-4">Rozwiń opis<i class="fas fa-angle-double-down ml-4"></i></div>
+                </div>
+
+                <div id="collapseOne" class="collapse" data-parent='#acc'>
+                  <div class="card-body px-5 py-4">
+                    <h3>Opis:</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ex a. Necessitatibus quaerat repellendus totam perferendis.</p>
+                    <h3 class="mt-5">Dla kogo?</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ex a. Necessitatibus quaerat repellendus totam perferendis.</p>
+                  </div>
+
+                  <div class="card-footer text-center">
+                    <button class="btn btn-outline-dark py-3 px-5">Wybieram</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Second-->
+
+          <div class="col-md-6">
+            <div class="accordion" id='acc2'>
+              <div class="card mb-4">
+                <div class="box-two">
+                  <p class="h-100 text-dark text-center p-3">Drugi</p>
+                </div>
+
+                <div data-toggle="collapse" data-target='#collapseTwo' aria-expanded='true' aria-controls='collapseTwo'>
+                  <div class="card-header text-center py-4">Rozwiń opis<i class="fas fa-angle-double-down ml-4"></i></div>
+                </div>
+
+                <div id="collapseTwo" class="collapse" data-parent='#acc2'>
+                  <div class="card-body px-5 py-4">
+                    <h3>Opis:</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ex a. Necessitatibus quaerat repellendus totam perferendis.</p>
+                    <h3 class="mt-5">Dla kogo?</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ex a. Necessitatibus quaerat repellendus totam perferendis.</p>
+                  </div>
+
+                  <div class="card-footer text-center">
+                    <button class="btn btn-outline-dark py-3 px-5">Wybieram</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Third-->
+
+          <div class="col-md-6">
+            <div class="accordion" id='acc3'>
+              <div class="card mb-4">
+                <div class="box-three">
+                  <p class="h-100 text-dark text-center p-3">Trzeci</p>
+                </div>
+
+                <div data-toggle="collapse" data-target='#collapseThree' aria-expanded='true' aria-controls='collapseThree'>
+                  <div class="card-header text-center py-4">Rozwiń opis<i class="fas fa-angle-double-down ml-4"></i></div>
+                </div>
+
+                <div id="collapseThree" class="collapse" data-parent='#acc3'>
+                  <div class="card-body px-5 py-4">
+                    <h3>Opis:</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ex a. Necessitatibus quaerat repellendus totam perferendis.</p>
+                    <h3 class="mt-5">Dla kogo?</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ex a. Necessitatibus quaerat repellendus totam perferendis.</p>
+                  </div>
+
+                  <div class="card-footer text-center">
+                    <button class="btn btn-outline-dark py-3 px-5">Wybieram</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Fourth-->
+
+          <div class="col-md-6">
+            <div class="accordion" id='acc4'>
+              <div class="card mb-4">
+                <div class="box-four">
+                  <p class="h-100 text-dark text-center p-3">Czwarty</p>
+                </div>
+
+                <div data-toggle="collapse" data-target='#collapseFour' aria-expanded='true' aria-controls='collapseFour'>
+                  <div class="card-header text-center py-4">Rozwiń opis<i class="fas fa-angle-double-down ml-4"></i></div>
+                </div>
+
+                <div id="collapseFour" class="collapse" data-parent='#acc4'>
+                  <div class="card-body px-5 py-4">
+                    <h3>Opis:</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ex a. Necessitatibus quaerat repellendus totam perferendis.</p>
+                    <h3 class="mt-5">Dla kogo?</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ex a. Necessitatibus quaerat repellendus totam perferendis.</p>
+                  </div>
+
+                  <div class="card-footer text-center">
+                    <button class="btn btn-outline-dark py-3 px-5">Wybieram</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <p class="mt-5 text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, deleniti!</p>
+        <hr>
+        <p class="text-muted text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque a commodi ea error facilis expedita atque,
+        quibusdam animi ipsum odit hic illum quaerat, reprehenderit eius vel non odio quam corrupti.</p>
+      </div>
+    </section>
+  </div>

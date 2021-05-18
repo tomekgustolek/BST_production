@@ -1,0 +1,76 @@
+<div class="container-fluid d-flex justify-content-center">
+  <div>
+    <div class="mb-5 justify-content-center">
+      <h2 class="my-5">Panel Edycyjny</h2>
+      <input type="text" placeholder="Nazwa Planu" name="name" />
+      <div class="p-2">
+        <img src="../../../assets/weight-lifting.png" />
+      </div>
+    </div>
+
+    <div class="container-fluid bg-light w-100">
+      <section *ngFor="let training of trainings; let i = index;" class="bg-light">
+        <div class="form-group col-md-4">
+          <label for="FormControlSelect">Wybierz Dzień</label>
+          <select class="form-control" id="FormControlSelect">
+            <option>Poniedziałek</option>
+            <option>Wtorek</option>
+            <option>Środa</option>
+            <option>Czwartek</option>
+            <option>Piątek</option>
+            <option>Sobota</option>
+            <option>Niedziela</option>
+          </select>
+        </div>
+        <div class="row">
+          <table class="table mb-0">
+            <tr>
+              <th style="width: 2%"></th>
+              <th style="width: 30%">Nazwa Cwiczenia</th>
+              <th style="width: 19%">Liczba Serii</th>
+              <th style="width: 19%">Liczba Powtorzen</th>
+              <th style="width: 30%">Uwagi</th>
+            </tr>
+
+            <tr *ngFor="let exercise of exercises; let j = index;">
+              <td>
+                <button *ngIf="comp(j)" type="button" (click)="deleteExercise(j)" class="btn btn-default mb-2 ml-1" style="width: 1.5rem; height:1.5rem;">
+                  <i class="fas fa-times" style="color: #d9534f ; font-size: 1.5rem;"></i>
+                </button>
+              </td>
+              <td><input type="text" name="name" /></td>
+              <td><input type="number" name="" value="0" min="0" /></td>
+              <td><input type="number" name="" value="0" min="0" /></td>
+              <td><input type="text" name="name" /></td>
+            </tr>
+
+          </table>
+
+        </div>
+
+        <div (click)="addExercise()" class="text-center mb-5">
+          <span><i class="fas fa-plus" style="color: #0275d8 ; font-size: 1.5rem;"></i></span>
+        </div>
+        <div class="text-center mb-4 d-flex justify-content-center">
+          <div *ngIf="comp(i)" class="border rounded-circle bg-dark text-light text-align-center" (click)="deleteTraining(i)" style="width: 7rem; height:7rem;">
+            <span class="d-block text-light"><i class="fas fa-times" style="color: #d9534f ; font-size: 3rem;"></i></span>
+            Usuń <br />Trening
+          </div>
+        </div>
+        <hr />
+        
+      </section>
+    </div>
+
+    <div class="text-center mb-5 d-flex justify-content-center">
+      <div class="border rounded-circle bg-dark text-light text-align-center" (click)="addTraining()" style="width: 7rem; height:7rem;">
+        <span class="d-block text-light"><i class="fas fa-plus" style="color: #0275d8 ; font-size: 3rem;"></i></span>
+        Dodaj <br />Trening
+        </div>
+      </div>
+
+      
+    </div>
+  
+</div>
+

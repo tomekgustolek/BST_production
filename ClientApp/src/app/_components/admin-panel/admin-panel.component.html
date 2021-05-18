@@ -1,0 +1,17 @@
+<div class="container mt-5">
+  <h2>Admin Panel</h2>
+  <div class="tab-panel">
+    <tabset class="member-tabset">
+      <!--*appHasRole="['Admin']"-->
+      <tab heading="User Management">
+        <div class="container">
+          <app-user-management></app-user-management>
+        </div>
+      </tab>
+      <!--*appHasRole="['Admin', 'Moderator']"-->
+      <tab heading="Photo Management" >
+        <app-photo-management></app-photo-management>
+      </tab>
+    </tabset>
+  </div>
+</div>
